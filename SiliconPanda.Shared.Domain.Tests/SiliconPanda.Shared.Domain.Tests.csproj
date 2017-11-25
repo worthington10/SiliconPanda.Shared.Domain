@@ -17,5 +17,4 @@
   <ItemGroup>
     <ProjectReference Include="..\SiliconPanda.Shared.Domain\SiliconPanda.Shared.Domain.csproj" />
   </ItemGroup>
-
 </Project>

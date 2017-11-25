@@ -25,7 +25,8 @@ namespace SiliconPanda.Shared.Domain.Tests.Dto.Extensions.ImageExtenstions
             var crop = image.GetDefaultImageCrop(CropType.Asset, 1234, 321);
 
             crop.Image.ShouldBeEqualTo(image);
-            crop.AspectRatio.ShouldBeEqualTo(3);
+
+           crop.AspectRatio.ShouldBeEqualTo(3);
             crop.CropX.ShouldBeEqualTo((short)0);
             crop.CropY.ShouldBeEqualTo((short)0);
             crop.Height.ShouldBeEqualTo((short)256);
@@ -41,7 +42,7 @@ namespace SiliconPanda.Shared.Domain.Tests.Dto.Extensions.ImageExtenstions
             var crop = image.GetDefaultImageCrop(CropType.Asset, 1234, 321);
 
             crop.Image.ShouldBeEqualTo(image);
-            crop.AspectRatio.ShouldBeEqualTo(3);
+                      crop.AspectRatio.ShouldBeEqualTo(3);
             crop.CropX.ShouldBeEqualTo((short)0);
             crop.CropY.ShouldBeEqualTo((short)0);
             crop.Height.ShouldBeEqualTo((short)256);
