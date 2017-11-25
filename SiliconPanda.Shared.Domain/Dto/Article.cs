@@ -48,7 +48,7 @@ namespace SiliconPanda.Shared.Domain.Dto
         public virtual Tag Category
         {
             get => Tags.SingleOrDefault(c => c.TagType == TagType.Category);
-            set => this.AddAndRemoveTags(new List<Tag> { value }, TagType.Category);
+            set => this.MergeTags(new List<Tag> { value }, TagType.Category);
         }
 
         public virtual Tag PrimaryTag
@@ -60,13 +60,13 @@ namespace SiliconPanda.Shared.Domain.Dto
         public virtual IEnumerable<Tag> Series
         {
             get => Tags.Where(c => c.TagType == TagType.Series);
-            set => this.AddAndRemoveTags(value, TagType.Series);
+            set => this.MergeTags(value, TagType.Series);
         }
 
         public virtual IEnumerable<Tag> Keywords
         {
             get => Tags.Where(c => c.TagType == TagType.Keyword);
-            set => this.AddAndRemoveTags(value, TagType.Keyword);
+            set => this.MergeTags(value, TagType.Keyword);
         }
 
         public virtual IEnumerable<File> Files

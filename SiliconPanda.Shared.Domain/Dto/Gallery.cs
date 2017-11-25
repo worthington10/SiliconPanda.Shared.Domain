@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using SiliconPanda.Shared.Domain.Dto.Extensions;
@@ -27,7 +26,7 @@ namespace SiliconPanda.Shared.Domain.Dto
         public virtual Tag Category
         {
             get => Tags.SingleOrDefault(c => c.TagType == TagType.Category);
-            set => this.AddAndRemoveTags(new List<Tag> { value }, TagType.Category);
+            set => this.MergeTags(new List<Tag> { value }, TagType.Category);
         }
 
         public virtual IList<Image> Images
