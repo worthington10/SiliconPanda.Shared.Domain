@@ -40,7 +40,7 @@ namespace SiliconPanda.Shared.Domain.Tests.Dto.Extensions.ContentEnxtensions
             content.MergeTags(existingTags.Skip(11).Take(11), TagType.Keyword);
             content.MergeTags(existingTags.Skip(11).Take(11), TagType.Series);
             
-            content.Tags.ShouldBeEqualTo(existingTags.Take(11));
+            content.Tags.ShouldBeEqualTo(existingTags.Skip(11).Take(11));
         }
     }
 }
