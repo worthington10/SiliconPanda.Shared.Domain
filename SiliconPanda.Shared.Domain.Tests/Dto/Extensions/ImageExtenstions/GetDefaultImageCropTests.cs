@@ -25,11 +25,12 @@ namespace SiliconPanda.Shared.Domain.Tests.Dto.Extensions.ImageExtenstions
             var crop = image.GetDefaultImageCrop(CropType.Asset, 1234, 321);
 
             crop.Image.ShouldBeEqualTo(image);
-            crop.AspectRatio.ShouldBeEqualTo(12);
+
+           crop.AspectRatio.ShouldBeEqualTo(3);
             crop.CropX.ShouldBeEqualTo((short)0);
             crop.CropY.ShouldBeEqualTo((short)0);
-            crop.Height.ShouldBeEqualTo((short)123);
-            crop.Width.ShouldBeEqualTo((short)123);
+            crop.Height.ShouldBeEqualTo((short)256);
+            crop.Width.ShouldBeEqualTo((short)987);
             crop.Type.ShouldBeEqualTo(CropType.Asset);
         }
 
@@ -41,11 +42,11 @@ namespace SiliconPanda.Shared.Domain.Tests.Dto.Extensions.ImageExtenstions
             var crop = image.GetDefaultImageCrop(CropType.Asset, 1234, 321);
 
             crop.Image.ShouldBeEqualTo(image);
-            crop.AspectRatio.ShouldBeEqualTo(12);
+                      crop.AspectRatio.ShouldBeEqualTo(3);
             crop.CropX.ShouldBeEqualTo((short)0);
             crop.CropY.ShouldBeEqualTo((short)0);
-            crop.Height.ShouldBeEqualTo((short)123);
-            crop.Width.ShouldBeEqualTo((short)123);
+            crop.Height.ShouldBeEqualTo((short)256);
+            crop.Width.ShouldBeEqualTo((short)987);
             crop.Type.ShouldBeEqualTo(CropType.Asset);
         }
     }
